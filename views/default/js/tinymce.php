@@ -40,7 +40,7 @@ elgg.tinymce.init = function() {
 		relative_urls : false,
 		remove_script_host : false,
 		convert_urls : false,
-		document_base_url : wzm.config.wwwroot,
+		document_base_url : elgg.config.wwwroot,
 		toolbar1 : "bold italic underline alignleft aligncenter alignright bullist numlist image media link unlink",
 		width : "99%",
 		extended_valid_elements : "a[name|href|target|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name|style],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
