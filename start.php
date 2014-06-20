@@ -36,10 +36,11 @@ function tinymce_longtext_menu($hook, $type, $items, $vars) {
 
 function tinymce_get_site_language() {
 
-	if ($site_language = elgg_get_config('language')) {
-		$path = elgg_get_plugins_path() . "tinymce/vendor/tinymce/js/tinymce/langs";
-		if (file_exists("$path/$site_language.js")) {
-			return $site_language;
+	if($user = elgg_get_logged_in_user_entity()) {
+			$language = $user->language;
+			$path = elgg_get_plugins_path() . "tinymce/vendor/tinymce/js/tinymce/langs";
+		if (file_exists("$path/$language.js")) {
+			return $language;
 		}
 	}
 
